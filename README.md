@@ -2,11 +2,6 @@
 
 ## Multi Language Manipulate Demo
 
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
 ## Introduction
 This application helps to manipulate labels, dropdown values, string, content on the basis of language change.Values will be display automatically from the database or language files using helpers. 
 
@@ -27,7 +22,7 @@ If you have linux system, you can execute below command only in your project roo
     1) sudo chmod -R 777 install.sh
     2) ./install.sh
     
-Run Artisan Command for database setup, connection and configuration.
+If you have windows system, you can run Artisan Command for database setup, connection and configuration.
     
     php artisan install:app
     
@@ -59,6 +54,7 @@ Start the local development server
     
    
 ## Kye points before using this feature
+    
     Please check composer.json file in which you have to define 'helpers.php' file and 'database' folder path.
     
     Review config/config-variables.php file.
@@ -88,7 +84,7 @@ if (!function_exists('dbTrans')) {
      */
     function dbTrans(string $lang, string $tableName)
     {
-        return $lang.'_'.config('config-variables.field_post_fix.'.$tableName);
+        return $lang.'_'.config('table-variables.field_post_fix.'.$tableName);
     }
 }
 ```
